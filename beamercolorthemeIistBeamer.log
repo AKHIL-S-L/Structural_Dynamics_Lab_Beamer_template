@@ -1,0 +1,19 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdftex 2023.5.4)  12 MAY 2023 07:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"C:/Users/akhil/Desktop/IIST -Structural Dynamics and Vibration/beamercolorth
+emeIistBeamer.sty"
+
+(C:/Users/akhil/Desktop/IIST -Structural Dynamics and Vibration/beamercolorthem
+eIistBeamer.sty
+! Undefined control sequence.
+l.3 \ProvidesPackage
+                    {beamercolorthemeIistBeamer}
+? 
+! Emergency stop.
+l.3 
+    
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
