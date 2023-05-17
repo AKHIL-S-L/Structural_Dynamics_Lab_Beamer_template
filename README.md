@@ -10,3 +10,6 @@ Add the  code shown below for creating blocks.
 
 ![image](https://github.com/AKHIL-S-L/Structural_Dynamics_Lab_Beamer_template/assets/102666462/78749daf-84c4-4a3a-86a2-6fec043185e7)
 
+
+
+To add reference edit reference.bib file and cite the articles using the code \cite{keyword}
