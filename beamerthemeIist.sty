@@ -35,7 +35,14 @@
 }
 
 % \usepackage[absolute,overlay]{textpos}
-% Define the colors
+% to set thankyouslide 
+% 
+\newenvironment{thankyouframe}{
+	\setbeamercolor{background canvas}{bg=white}
+	\begin{frame}
+	}{
+	\end{frame}
+}
 
 
 % Redefine the footline template
