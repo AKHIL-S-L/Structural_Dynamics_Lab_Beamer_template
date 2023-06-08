@@ -1,0 +1,101 @@
+% Formally establish Beamer theme package
+\ProvidesPackage{beamerthemeIist}
+\RequirePackage{xcolor}
+
+% Define a new command for colored horizontal rule
+\newcommand{\coloredhrule}[2][black]{%
+	{\color{#1}\hrule height #2}%
+}
+% --------  Invoke presentation mode  ----------------
+\mode<presentation>
+
+% --------  Set color, inner theme, frame title formats, etc.  ------------
+\usecolortheme{IistBeamer}
+\usepackage{xcolor}
+\useinnertheme{circles}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\usepackage{helvet}
+
+
+% --------  Define behavior for theme option "minimal"  -----------
+\DeclareOptionBeamer{minimal}{
+    \setbeamertemplate{frametitle}
+    {
+        \nointerlineskip
+        \begin{beamercolorbox}[sep=0.3cm,ht=27pt,wd=\paperwidth]
+		{frametitle}
+            \vbox{}\vskip-2ex%
+            \strut\insertframetitle\strut
+            \coloredhrule[Blue]{0.5pt}%
+            \vskip-0.8ex%
+        \end{beamercolorbox}
+    } % Reference: https://bloerg.net/2012/06/21/customizing-the-frametitle-of-beamer-presentation.html
+    %\logo{\includegraphics[width=1cm]{./figures/iist_logo.png}}
+}
+
+% \usepackage[absolute,overlay]{textpos}
+% Define the colors
+
+
+% Redefine the footline template
+\setbeamertemplate{footline}{%
+	% Line above the footline
+	\vspace{.2cm}
+	\coloredhrule[Blue]{0.5pt}%
+	%\begin{beamercolorbox}[wd=.3\paperwidth,ht=1.25ex,dp=0ex,left]{palette primary}
+		% Put your logo here
+		\vspace{0.1cm}
+		\includegraphics[width=0.25cm]{./figures/iist_logo.png}
+%	\end{beamercolorbox}%
+	\hfill%
+	%\vspace{-0.2cm}%
+	\textcolor{Blue}{\textbf{{Structural Dynamics and Vibration Lab}}}%
+	\hfill%
+	\usebeamercolor[fg]{page number in head/foot}%
+	\usebeamerfont{page number in head/foot}%
+	\textcolor{Blue}{{\insertframenumber\,/\,\inserttotalframenumber\kern1em%
+}}
+\vspace{0.1cm}
+}
+
+
+
+
+
+
+
+
+
+% --------  Define behavior for theme option "sidebarleft"  -----------
+\DeclareOptionBeamer{sidebarleft}{
+    \useoutertheme[height=27pt,width=50pt,left]{sidebar}
+\vskip2ex%
+    \logo{\vspace{-1cm}\includegraphics[width=1.2cm]{./figures/iist_logo.png}}
+}
+
+
+
+
+
+
+
+
+
+% --------  Define behavior for theme option "sidebarright"  -----------
+\DeclareOptionBeamer{sidebarright}{
+    \useoutertheme[height=27pt,width=50pt,right]{sidebar}
+    \logo{\includegraphics[width=1.2cm]{./figures/iist_logo.png}}
+}
+
+\ProcessOptionsBeamer
+
+% --------  Set the font themes to be used here  -----------------
+%\usepackage{helvet}  % use Helvetica as text fonts
+
+% --------  Remove navigation symbols from appearing  ----------------
+\setbeamertemplate{navigation symbols}{}
+
+
+% --------  Invoke all mode
+\mode<all>
